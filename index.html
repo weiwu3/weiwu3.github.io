@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wei Wu — Software Engineer</title>
+<meta name="description" content="Full-stack software engineer working on backend systems, distributed infrastructure, and browser graphics.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙️</text></svg>">
+<style>
+  :root{
+    --bg:#fbfbfa; --surface:#fff; --line:#e6e4e0; --ink:#1a1918; --muted:#6b6862;
+    --accent:#b4410f; --accent-soft:#fdf1ea; --code:#f4f2ef;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#141413; --surface:#1c1c1a; --line:#2e2d2a; --ink:#eeece7; --muted:#9a958c;
+      --accent:#e8875a; --accent-soft:#2a1d16; --code:#232320;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#141413; --surface:#1c1c1a; --line:#2e2d2a; --ink:#eeece7; --muted:#9a958c;
+    --accent:#e8875a; --accent-soft:#2a1d16; --code:#232320;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+       font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:820px;margin:0 auto;padding:0 24px}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  /* ---- header ---- */
+  header{padding:80px 0 44px}
+  h1{font-size:clamp(30px,5.5vw,42px);line-height:1.15;margin:0 0 14px;letter-spacing:-.02em}
+  .lede{font-size:clamp(17px,2.4vw,19px);color:var(--muted);max-width:60ch;margin:0 0 26px}
+  .lede strong{color:var(--ink);font-weight:600}
+  .links{display:flex;flex-wrap:wrap;gap:10px}
+  .links a{display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border:1px solid var(--line);
+           border-radius:7px;font-size:14px;color:var(--ink);background:var(--surface);transition:.15s}
+  .links a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+
+  /* ---- sections ---- */
+  section{padding:40px 0;border-top:1px solid var(--line)}
+  h2{font-size:13px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);
+     margin:0 0 26px;font-weight:600}
+
+  .item{margin-bottom:42px}
+  .item:last-child{margin-bottom:0}
+  .item h3{font-size:19px;margin:0 0 4px;letter-spacing:-.01em}
+  .meta{font-size:13px;color:var(--muted);font-family:var(--mono);margin:0 0 12px}
+  .item p{margin:0 0 12px;max-width:66ch}
+  .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+  .tag{font-family:var(--mono);font-size:11.5px;padding:3px 8px;border-radius:5px;
+       background:var(--code);color:var(--muted)}
+  .num{font-family:var(--mono);color:var(--accent);font-weight:600}
+
+  figure{margin:16px 0 0;padding:18px;background:var(--surface);
+         border:1px solid var(--line);border-radius:10px;overflow-x:auto}
+  figure svg{display:block;width:100%;height:auto;min-width:460px}
+  figcaption{font-size:12.5px;color:var(--muted);margin-top:11px;font-family:var(--mono)}
+
+  .grid{display:grid;grid-template-columns:150px 1fr;gap:8px 20px;font-size:14.5px}
+  .grid dt{font-family:var(--mono);font-size:12.5px;color:var(--muted);padding-top:2px}
+  .grid dd{margin:0}
+  @media (max-width:620px){ .grid{grid-template-columns:1fr;gap:2px 0}
+    .grid dd{margin-bottom:12px} header{padding:52px 0 32px} }
+
+  footer{padding:40px 0 72px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+  .avail{display:inline-block;padding:3px 9px;border-radius:20px;background:var(--accent-soft);
+         color:var(--accent);font-size:12.5px;font-family:var(--mono);margin-bottom:14px}
+
+  /* svg theming */
+  .s-line{stroke:var(--line)} .s-ink{stroke:var(--ink)} .s-acc{stroke:var(--accent)}
+  .f-surface{fill:var(--surface)} .f-code{fill:var(--code)} .f-acc{fill:var(--accent)}
+  .t{fill:var(--ink);font-family:var(--mono);font-size:11px}
+  .tm{fill:var(--muted);font-family:var(--mono);font-size:10px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Wei Wu</h1>
+  <p class="lede">Software engineer working on <strong>backend systems, distributed
+     infrastructure, and browser graphics</strong>. I currently lead backend development at a
+     laser-manufacturing company, where I build the software that operates a fleet of networked
+     machines — from async services and GPU model serving to an in-browser rendering engine.</p>
+  <div class="links">
+    <a href="https://github.com/weiwu3">GitHub</a>
+    <a href="https://www.linkedin.com/in/weiwu3">LinkedIn</a>
+    <a href="mailto:weiwu3@alumni.cmu.edu">Email</a>
+    <a href="Wei_Wu_Resume.pdf">Résumé</a>
+  </div>
+</header>
+
+<section>
+  <h2>Selected work</h2>
+
+  <div class="item">
+    <h3>Async task-queue offload service</h3>
+    <p class="meta">Python · Flask/Gunicorn · multiprocessing — sole author</p>
+    <p>Design compilation is CPU-heavy and was blocking the main application server. I built a
+       worker pool that pulls tasks from a shared queue and runs each as a sequential multi-stage
+       pipeline, while many tasks proceed in parallel across the pool. Workers spawn on demand.</p>
+    <p>Most of what the service knows came from production failures. It emits per-stage timing
+       because throughput regressions were otherwise invisible. It monitors memory because an
+       out-of-memory condition once triggered a respawn storm that took the whole pool down. And
+       it isolates failures so one bad job can't cascade — after a race-condition deadlock on
+       shared state under concurrent dequeues.</p>
+    <figure>
+      <svg viewBox="0 0 620 190" role="img" aria-label="Requests enter a shared queue, are pulled by pooled workers running staged pipelines, with a memory monitor supervising respawns">
+        <rect x="8" y="66" width="86" height="42" rx="6" class="f-surface s-line" stroke-width="1.5"/>
+        <text x="51" y="83" text-anchor="middle" class="t">app</text>
+        <text x="51" y="97" text-anchor="middle" class="tm">server</text>
+        <path d="M98 87 H140" class="s-ink" stroke-width="1.5" marker-end="url(#a)"/>
+        <rect x="144" y="58" width="66" height="58" rx="6" class="f-code s-line" stroke-width="1.5"/>
+        <text x="177" y="82" text-anchor="middle" class="t">queue</text>
+        <text x="177" y="97" text-anchor="middle" class="tm">shared</text>
+        <path d="M214 74 H256 M214 87 H256 M214 100 H256" class="s-line" stroke-width="1.5" marker-end="url(#a)"/>
+        <g>
+          <rect x="260" y="18" width="180" height="40" rx="6" class="f-surface s-line" stroke-width="1.5"/>
+          <text x="272" y="42" class="t">worker 1</text>
+          <rect x="340" y="28" width="26" height="20" rx="3" class="f-code s-line"/><text x="345" y="42" class="tm">s1</text>
+          <rect x="370" y="28" width="26" height="20" rx="3" class="f-code s-line"/><text x="375" y="42" class="tm">s2</text>
+          <rect x="400" y="28" width="26" height="20" rx="3" class="f-code s-line"/><text x="405" y="42" class="tm">s3</text>
+        </g>
+        <g>
+          <rect x="260" y="67" width="180" height="40" rx="6" class="f-surface s-line" stroke-width="1.5"/>
+          <text x="272" y="91" class="t">worker 2</text>
+          <rect x="340" y="77" width="26" height="20" rx="3" class="f-code s-line"/><text x="345" y="91" class="tm">s1</text>
+          <rect x="370" y="77" width="26" height="20" rx="3" class="f-code s-line"/><text x="375" y="91" class="tm">s2</text>
+          <rect x="400" y="77" width="26" height="20" rx="3" class="f-code s-line"/><text x="405" y="91" class="tm">s3</text>
+        </g>
+        <g opacity=".55">
+          <rect x="260" y="116" width="180" height="40" rx="6" class="f-surface s-line" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <text x="272" y="140" class="t">worker n</text>
+          <text x="352" y="140" class="tm">spawned on demand</text>
+        </g>
+        <path d="M470 87 V50 H452" class="s-acc" stroke-width="1.5" fill="none" marker-end="url(#b)"/>
+        <rect x="466" y="70" width="146" height="36" rx="6" class="s-acc" fill="none" stroke-width="1.5"/>
+        <text x="478" y="86" class="t">memory monitor</text>
+        <text x="478" y="99" class="tm">respawn / isolate</text>
+        <defs>
+          <marker id="a" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+            <path d="M0 0 L7 3.5 L0 7 z" fill="currentColor" class="t"/></marker>
+          <marker id="b" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+            <path d="M0 0 L7 3.5 L0 7 z" class="f-acc"/></marker>
+        </defs>
+      </svg>
+      <figcaption>Tasks run stages sequentially; the pool runs tasks in parallel.</figcaption>
+    </figure>
+    <div class="tags"><span class="tag">python</span><span class="tag">multiprocessing</span>
+      <span class="tag">queues</span><span class="tag">failure isolation</span></div>
+  </div>
+
+  <div class="item">
+    <h3>In-browser 3D point-cloud engine</h3>
+    <p class="meta">Vanilla JavaScript · Three.js · custom binary codec</p>
+    <p>Generating engraving geometry meant a round trip to a GPU server for every edit. I moved
+       <span class="num">four of six</span> generation paths into the browser, which took per-edit
+       latency from a <span class="num">1–3 second</span> server round trip to instant.</p>
+    <p>That required decoding 16-bit depth images the browser won't decode natively, so I wrote a
+       <strong>16-bit PNG decoder from scratch with zero dependencies</strong> — inflate, unfilter,
+       and bit-depth handling — plus a compact binary format for the point data and depth-aware
+       layered sampling. Editing happens in place in a Three.js viewport.</p>
+    <figure>
+      <svg viewBox="0 0 620 132" role="img" aria-label="Before: browser sends every edit to a GPU server. After: decode and sample happen in the browser.">
+        <text x="8" y="18" class="tm">BEFORE</text>
+        <rect x="8" y="26" width="78" height="34" rx="6" class="f-surface s-line" stroke-width="1.5"/>
+        <text x="47" y="47" text-anchor="middle" class="t">browser</text>
+        <path d="M90 43 H150" class="s-line" stroke-width="1.5" marker-end="url(#a2)"/>
+        <text x="120" y="37" text-anchor="middle" class="tm">1–3 s</text>
+        <rect x="154" y="26" width="96" height="34" rx="6" class="f-code s-line" stroke-width="1.5"/>
+        <text x="202" y="47" text-anchor="middle" class="t">GPU server</text>
+        <path d="M250 55 Q202 78 90 55" class="s-line" stroke-width="1.5" fill="none" marker-end="url(#a2)"/>
+        <text x="8" y="96" class="tm">AFTER</text>
+        <rect x="8" y="102" width="486" height="26" rx="6" class="s-acc" fill="none" stroke-width="1.5"/>
+        <text x="20" y="119" class="t">browser</text>
+        <text x="86" y="119" class="tm">16-bit PNG decode</text>
+        <text x="212" y="119" class="tm">binary codec</text>
+        <text x="318" y="119" class="tm">layered sampling</text>
+        <text x="446" y="119" class="t">instant</text>
+        <path d="M508 115 H556" class="s-line" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#a2)"/>
+        <text x="562" y="119" class="tm">GPU</text>
+        <defs><marker id="a2" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+          <path d="M0 0 L7 3.5 L0 7 z" fill="currentColor" class="t"/></marker></defs>
+      </svg>
+      <figcaption>Two of six paths still use the GPU server; the rest run client-side.</figcaption>
+    </figure>
+    <div class="tags"><span class="tag">javascript</span><span class="tag">three.js</span>
+      <span class="tag">png/inflate</span><span class="tag">binary formats</span></div>
+  </div>
+
+  <div class="item">
+    <h3>Camera-to-machine calibration pipeline</h3>
+    <p class="meta">Python · OpenCV · WebAssembly</p>
+    <p>A camera sees pixels; the machine moves in its own internal units. Bridging them is a
+       calibration problem: detect printed ChArUco markers and grids at sub-pixel accuracy, fit
+       curves, then solve a RANSAC homography mapping <span class="num">225</span> grid points
+       into real-world millimetres — RANSAC because a handful of detections are always wrong and
+       a least-squares fit would quietly absorb them.</p>
+    <p>The pipeline also stitches many overlapping frames into one image, correcting for
+       alignment, uneven lighting, and noise. I compiled the detector to WebAssembly so the same
+       code runs in the browser.</p>
+    <div class="tags"><span class="tag">opencv</span><span class="tag">charuco</span>
+      <span class="tag">ransac</span><span class="tag">wasm</span></div>
+  </div>
+
+  <div class="item">
+    <h3>Toolpath optimiser</h3>
+    <p class="meta">Python · parallel C++ · kd-tree</p>
+    <p>An engraving job is thousands of disconnected marks, and the machine spends much of its
+       time travelling between them. Ordering those moves well is a travelling-salesman problem.
+       I implemented a solver with kd-tree nearest-neighbour lookup and grid-based partitioning
+       for very large point clouds, in Python and parallel C++.</p>
+    <p>It cut engraving time by <span class="num">72%</span> in exchange for
+       <span class="num">7%</span> more processing time — a trade worth making, since the machine
+       is the bottleneck and the CPU is idle anyway.</p>
+    <div class="tags"><span class="tag">c++</span><span class="tag">tsp</span>
+      <span class="tag">kd-tree</span><span class="tag">parallelism</span></div>
+  </div>
+
+  <div class="item">
+    <h3>Synchronous Flask → async FastAPI migration</h3>
+    <p class="meta">Python · FastAPI · Socket.IO · asyncio — serves 500+ users</p>
+    <p>I drove the platform's move to an async architecture, building the new codebase from the
+       ground up: modular device and client event handlers, an async cloud integration layer, a
+       MySQL/SQLModel data layer, and OAuth login.</p>
+    <p>The interesting work came after. Async is unforgiving about blocking calls, and I traced
+       event-loop starvation to synchronous cloud I/O more than once. Fixes included moving those
+       calls off the loop, throttling a device probe so one unresponsive machine couldn't stall
+       the server, and adding per-device locks and reentrancy guards so concurrent operations
+       stayed safe.</p>
+    <div class="tags"><span class="tag">asyncio</span><span class="tag">fastapi</span>
+      <span class="tag">socket.io</span><span class="tag">concurrency</span></div>
+  </div>
+
+  <div class="item">
+    <h3>Multi-server coherent cache</h3>
+    <p class="meta">Python · asyncio · MySQL</p>
+    <p>A fleet of web servers each needed fast access to device state that lived in MySQL, without
+       every request paying a round trip. I built an asyncio-locked in-memory cache with
+       conditional write-through that skips no-op writes, fetch-on-miss fallback, an
+       offline-authoritative mode for disconnected operation, and fire-and-forget cross-server
+       invalidation so the fleet stays coherent.</p>
+    <div class="tags"><span class="tag">caching</span><span class="tag">invalidation</span>
+      <span class="tag">asyncio</span><span class="tag">mysql</span></div>
+  </div>
+
+  <div class="item">
+    <h3>Air-gapped server appliance</h3>
+    <p class="meta">Ubuntu · LUKS + TPM2 · nginx · dnsmasq/hostapd</p>
+    <p>Some customers can't put a machine on the internet. I built a mini-PC appliance that runs
+       the entire stack locally: hardened headless Ubuntu with full-disk encryption and TPM2
+       auto-unlock under Secure Boot, every cloud dependency re-architected to run on-box, and the
+       device configured as its own router and WiFi access point so the machine and operator
+       connect directly to it. Shipped as per-customer units.</p>
+    <div class="tags"><span class="tag">linux</span><span class="tag">luks/tpm2</span>
+      <span class="tag">networking</span><span class="tag">offline-first</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Also</h2>
+  <dl class="grid">
+    <dt>GPU serving</dt>
+    <dd>Stood up and run production model servers — Segment Anything, Depth-Anything-V2, BiRefNet,
+        Florence-2 — as background services on bare-metal NVIDIA/CUDA hosts.</dd>
+    <dt>Fleet updates</dt>
+    <dd>Over-the-air update system on Azure IoT with A/B release slots for safe rollback, a cloud
+        device-state watcher, and production safety gating — fleet-wide updates without SSH.</dd>
+    <dt>Browser editor</dt>
+    <dd>Principal front-end author of an in-browser design editor: a vanilla-JS single-page app
+        rendering through Skia/CanvasKit, offloading heavy work to WebAssembly and Web Workers.</dd>
+    <dt>Real-time</dt>
+    <dd>Low-latency browser-to-device control over WebRTC with a Socket.IO fallback; motion-control
+        streaming rewritten with vectorised NumPy producers to eliminate buffer underruns.</dd>
+    <dt>Infrastructure</dt>
+    <dd>Containerisation and CI/CD for the server fleet — moved the team onto a self-hosted
+        Docker/registry pipeline, provisioned the GPU hosts, wrote the nightly regression suite.</dd>
+  </dl>
+</section>
+
+<section>
+  <h2>Tools</h2>
+  <dl class="grid">
+    <dt>Languages</dt><dd>Python · C++ · JavaScript · C# · SQL</dd>
+    <dt>Backend</dt><dd>FastAPI · Flask · asyncio · Socket.IO · WebRTC · REST · MySQL · Redis</dd>
+    <dt>Graphics</dt><dd>Skia/CanvasKit · Three.js · WebAssembly · Web Workers · OpenCV</dd>
+    <dt>ML / GPU</dt><dd>PyTorch · CUDA · TensorRT · SAM2 · Depth-Anything-V2</dd>
+    <dt>Infra</dt><dd>Docker · Linux · nginx · Azure · systemd · bare-metal GPU</dd>
+  </dl>
+</section>
+
+<section>
+  <h2>Background</h2>
+  <dl class="grid">
+    <dt>2023 – now</dt><dd>Full-stack software engineer, backend lead — laser manufacturing</dd>
+    <dt>2023</dt><dd>M.S., Carnegie Mellon University</dd>
+    <dt>2022</dt><dd>Product marketing intern, autonomous driving simulation — MathWorks</dd>
+    <dt>2021</dt><dd>B.S., University of Wisconsin–Madison</dd>
+  </dl>
+  <p style="margin-top:20px;color:var(--muted);max-width:66ch;font-size:15px">
+    My degrees are in mechanical engineering. I moved into software because the interesting
+    problems in machines that move turned out to be on the software side, and I've spent the last
+    three years there — which is why the work above runs from firmware timing to browser rendering
+    rather than sitting in one layer.</p>
+</section>
+
+<footer>
+  <span class="avail">open to new opportunities</span><br>
+  <a href="mailto:weiwu3@alumni.cmu.edu">weiwu3@alumni.cmu.edu</a> ·
+  <a href="https://github.com/weiwu3">github.com/weiwu3</a> ·
+  <a href="https://www.linkedin.com/in/weiwu3">linkedin.com/in/weiwu3</a>
+</footer>
+
+</div>
+</body>
+</html>
